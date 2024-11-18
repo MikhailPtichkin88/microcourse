@@ -8,9 +8,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-			fontFamily: {
-				sans: ["var(--font-sans)", ...fontFamily.sans]
-			},
+  		fontFamily: {
+  			sans: ["var(--font-sans)", ...fontFamily.sans]
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
