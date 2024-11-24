@@ -18,7 +18,7 @@ export function CourseItem({course, onDelete}:{course: CourseListElement, onDele
         <CardDescription>{course.description}</CardDescription>
       </CardHeader>
 <CardFooter>
-  <Button onClick={handleDelete} disabled={isLoadingDelete}>Удалить</Button>
+  <Button className="mt-8" onClick={handleDelete} disabled={isLoadingDelete}>Удалить</Button>
 </CardFooter>
     </Card>
   )
