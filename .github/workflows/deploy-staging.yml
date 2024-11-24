@@ -3,7 +3,7 @@ name: deploy staging
 on:
   push:
     branches:
-      - master
+      - production
 
 jobs:
   lint:
@@ -33,7 +33,7 @@ jobs:
           user: ${{ secrets.STAGING_SSH_USERNAME }}
           private_key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
           host_fingerprint: ${{ secrets.STAGING_SSH_FINGERPRINT }}
-          command: source ~/.nvm/nvm.sh; ~/microcourse/deploy.sh
+          command: source ~/.nvm/nvm.sh; ~/microcourse_prod/deploy.sh
   e2e:
     needs: deploy
     timeout-minutes: 60
@@ -50,7 +50,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
         env:
-          TEST_ENV_BASE_URL: https://staging.ptichkinportfolio.online
+          TEST_ENV_BASE_URL: https://ptichkinportfolio.online
       - uses: actions/upload-artifact@v3
         if: always()
         with:

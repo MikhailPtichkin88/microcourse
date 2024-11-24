@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3050",
+    "start": "next start -p 3060",
     "lint": "next lint",
     "lint:types": "tsc --noEmit",
     "prettier": "prettier -w .",
