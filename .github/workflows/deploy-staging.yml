@@ -29,7 +29,7 @@ jobs:
         uses: D3rHase/ssh-command-action@v0.2.2
         with:
           # hostname / IP of the server
-          host: ${{ secrets.STAGING_SSH_HOST }}
+          host: ${{ secrets.STAGING_SSH_HOST_PROD }}
           user: ${{ secrets.STAGING_SSH_USERNAME }}
           private_key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
           host_fingerprint: ${{ secrets.STAGING_SSH_FINGERPRINT }}
