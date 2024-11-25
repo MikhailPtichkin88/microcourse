@@ -33,7 +33,7 @@ jobs:
           user: ${{ secrets.STAGING_SSH_USERNAME }}
           private_key: ${{ secrets.STAGING_SSH_PRIVATE_KEY_PROD }}
           host_fingerprint: ${{ secrets.STAGING_SSH_FINGERPRINT_PROD }}
-          command: source ~/.nvm/nvm.sh; ~/microcourse_prod/deploy.sh
+          command: source ~/.nvm/nvm.sh; cd ./microcourse_prod; ./deploy.sh
   e2e:
     needs: deploy
     timeout-minutes: 60
