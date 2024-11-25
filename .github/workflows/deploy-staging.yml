@@ -31,8 +31,8 @@ jobs:
           # hostname / IP of the server
           host: ${{ secrets.STAGING_SSH_HOST_PROD }}
           user: ${{ secrets.STAGING_SSH_USERNAME }}
-          private_key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
-          host_fingerprint: ${{ secrets.STAGING_SSH_FINGERPRINT }}
+          private_key: ${{ secrets.STAGING_SSH_PRIVATE_KEY_PROD }}
+          host_fingerprint: ${{ secrets.STAGING_SSH_FINGERPRINT_PROD }}
           command: source ~/.nvm/nvm.sh; ~/microcourse_prod/deploy.sh
   e2e:
     needs: deploy
