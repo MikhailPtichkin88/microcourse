@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Inter as FontSans} from "next/font/google"
 import "./globals.css";
 import {cn} from "@/shared/ui/utils"
+import { AppHeader } from "@/widgets/app-header/app-header";
 
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
         className={cn(`min-h-screen bg-background font-sans antialiased bg-blue-200`, fontSans.variable)}
       >
+        <AppHeader />
         {children}
       </body>
     </html>
