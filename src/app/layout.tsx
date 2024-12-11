@@ -27,7 +27,6 @@ export default function RootLayout({
         className={cn(`min-h-screen bg-background font-sans antialiased`, fontSans.variable)}
       >
         <ThemeProvider>
-        <AppHeader />
         {children}
         </ThemeProvider>
       </body>
