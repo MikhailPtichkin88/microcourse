@@ -3,6 +3,7 @@ import {Inter as FontSans} from "next/font/google"
 import "./globals.css";
 import {cn} from "@/shared/ui/utils"
 import { AppHeader } from "@/widgets/app-header/app-header";
+import { ThemeProvider } from "@/features/theme/theme-provider";
 
 
 export const metadata: Metadata = {
@@ -21,12 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(`min-h-screen bg-background font-sans antialiased bg-blue-200`, fontSans.variable)}
+        className={cn(`min-h-screen bg-background font-sans antialiased`, fontSans.variable)}
       >
+        <ThemeProvider>
         <AppHeader />
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );
