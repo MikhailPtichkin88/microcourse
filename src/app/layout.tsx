@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import {Inter as FontSans} from "next/font/google"
 import "./globals.css";
 import {cn} from "@/shared/ui/utils"
-import { ThemeProvider } from "@/features/theme/theme-provider";
+import { AppProvider } from "./_providers/app-provider";
 
 
 export const metadata: Metadata = {
@@ -25,9 +25,9 @@ export default function RootLayout({
       <body
         className={cn(`min-h-screen bg-background font-sans antialiased`, fontSans.variable)}
       >
-        <ThemeProvider>
+        <AppProvider>
         {children}
-        </ThemeProvider>
+        </AppProvider>
       </body>
     </html>
   );
